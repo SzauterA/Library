@@ -1,0 +1,26 @@
+CREATE SCHEMA library;
+
+CREATE TABLE library.books (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    ISBN VARCHAR(13) NOT NULL,
+    available INTEGER NOT NULL
+);
+
+CREATE TABLE library.customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    birth DATE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO libary.books (title, author, ISBN, available) VALUES
+    ('The Shadow Over Innsmouth', 'H.P. Lovecraft', '9781495393082', 5),
+    ('At the Mountains of Madness', 'H.P. Lovecraft', '9780241341315', 3),
+    ('The Shadow Out of Time', 'H.P. Lovecraft', '9780967321530', 2),
+    ('The Shining', 'Stephen King', '9780307743657', 5),
+    ('The Outsider', 'Stephen King', '9781501180989', 3),
+    ('Dracula', 'Bram Stoker', '9781503261389', 6);
